@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, .5);
+    border-radius: 4px;
+    color: rgb(21, 0, 86);
+    transition-duration: .5s;
+}
+
+body{
+    background: url(./assests/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    margin-top: 100px;
+   /* background-color: red; */
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   column-gap: 100px;
+   width: 500px;
+   padding: 10px;
+}
+
+.heading{
+    color:aliceblue;
+    margin-bottom: 40px;
+    letter-spacing: 4.3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.tab-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.tab{
+    color: rgba(219, 226, 239, .5);
+
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.tab-icon{
+    display: none;
+}
+
+@media(max-width:400px){
+    .search-tab-icon{
+        display: none;
+    }
+}
+
+@media(max-width:400px){
+    .tab-icon{
+        display: flex;
+        height: 40px;
+        width: 40px;
+    }
+}
+.grant-location-container{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* scale: 0; */
+    display:none;
+    /* position: absolute; */
+    font-size: 20px;
+    text-align: center;
+    color: rgb(8, 71, 125);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.head{
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.sub-head{
+    font-size: 17px;
+    background-color: rgba(245, 238, 197, 0.384);
+    margin-bottom: 20px;
+}
+
+.btn{
+    all: unset;
+    height: 40px;
+    width: 170px;
+    background-color: rgb(121, 192, 168);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 7px 6px rgba(97, 94, 76, 0.532);
+    color: rgb(0, 77, 73);
+    font-weight: bold;
+    transition: .3s;
+    font-size: 17px;
+    border: 2px solid rgba(0, 128, 0, 0.333);
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 7px 10px rgba(97, 94, 76, 0.532);
+}
+
+.form-container{
+    /* scale: 0; */
+    display:none;
+    /* display: flex; */
+    /* position: relative; */
+    /* bottom: 300px; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+[data-searchInput]{
+    all: unset;
+    background-color: rgba(219, 226, 239, .5);
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: start;
+    padding-left: 18px;
+}
+.btn-2{
+    all: unset;
+    background-color: rgba(219, 226, 239, 0.274);
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.loading-container{
+    /* scale: 0; */
+    display:none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* bottom: 360px; */
+
+}
+.loading-container p{
+   font-size: large;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: bold;
+   color: rgb(0, 42, 121);
+   padding-top: 20px;
+}
+
+/* Weather information */
+.user-info-container{
+    /* scale: 1; */
+    display:none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    /* position: relative; */
+    /* bottom: 580px; */
+}
+.error{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 22, 104);
+    font-weight: bold;
+}
+.active{
+    display: flex;
+}
+.parameter-container{
+    /* width: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px ;
+    gap: 15px;
+}
+
+.parameter{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(253, 248, 226, 0.344);
+    height: 150px;
+    width: 150px;
+    color: rgb(0, 42, 121);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 8px;
+    border-radius: 10px;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+[ data-cityName]{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    font-style: italic;
+}
+
+[data-countryIcon]{
+    height: 30px;
+}
+
+[data-weatherDesc]{
+    color: rgba(243, 247, 255, 0.699);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px
+}
+
+.icon-temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color:rgb(0, 42, 121) ;
+}
+
+[data-weatherIcon]{
+    height: 60px;
+}
+
+
+[data-Humidity]::after{
+    content: "%";
+}
+
+[data-windSpeed]::after{
+    content: " km/h";
+}
+

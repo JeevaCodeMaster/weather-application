@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1 class="heading">WEATHER APP</h1>
+
+        <!-- Tab section -->
+        <div class="tab-container">
+            <div class="tab" data-userWeather>Your Weather</div>
+            <div class="tab search-tab-icon" data-searchWeather>Search Weather</div>
+            <div class="tab tab-icon" data-searchIconWeather><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+
+
+        <!-- Weather section -->
+        <div class="weather-container">
+
+            <!-- grant location section -->
+            <div class="grant-location-container">
+                <img src="./assests/location.png" height="150" loading="lazy">
+                <p class="head">Grant Location Access</p>
+                <p class="sub-head">Allow Access to get Weather Information</p>
+                <button class="btn" data-grantAccess><i style="padding-right: 14px;"
+                        class="fa-solid fa-location-dot"></i>Grant Access</button>
+            </div>
+
+            <div class="error">
+                <img src="./assests/error.png" height="250" alt="">
+                <p>City Not Found </p>
+            </div>
+
+            <!-- Search Form -->
+            <form class="form-container" data-searchForm>
+
+                <input placeholder="Search for city..." data-searchInput>
+                <button type="submit" class="btn-2">
+                    <img src="./assests/search-button.png" height="20">
+                </button>
+
+            </form>
+
+            <!-- loading screen container -->
+            <div class="loading-container">
+                <img src="./assests/loading.gif" height="200">
+                <p>Loading...</p>
+            </div>
+
+            <!-- weather UI section -->
+            <div class="user-info-container">
+
+                <!-- city name and falg -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description -->
+                <p data-weatherDesc></p>
+                <div class="icon-temp">
+                    <img data-weatherIcon>
+
+                    <p data-temp></p>°C
+                </div>
+
+
+
+                <div class="parameter-container">
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./assests/wind.png" height="70">
+                        <p>Wind Speed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./assests/humidity.png" height="70">
+                        <p>Humidity</p>
+                        <p data-Humidity></p>
+                    </div>
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./assests/clouds.png" height="70">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
